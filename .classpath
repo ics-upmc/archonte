@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/plugins/ca.uvic.cs.chisel.cajun.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/plugins/org.coode.dlquery.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/plugins/org.coode.owlviz.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/plugins/org.protege.editor.owl.codegeneration.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/plugins/org.protege.editor.owl.diff.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/plugins/org.protege.editor.owl.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/plugins/org.protege.editor.owl.rdf.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/plugins/org.protege.explanation.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/plugins/org.protege.ontograf.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/plugins/org.protege.owl.diff.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/plugins/org.protege.owl.rdf.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/plugins/org.semanticweb.HermiT.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/plugins/org.semanticweb.owl.owlapi.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/plugins/uk.ac.manchester.cs.owl.factplusplus.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/bin/bnd.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/bin/dev-tools.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/bin/felix.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/bin/ProtegeLauncher.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/bundles/org.apache.felix.bundlerepository-1.4.2.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/bundles/org.apache.felix.configadmin.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/bundles/org.apache.felix.scr.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/bundles/org.eclipse.equinox.common.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/bundles/org.eclipse.equinox.registry.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/bundles/org.eclipse.equinox.supplement.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/bundles/org.protege.common.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/bundles/org.protege.editor.core.application.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/Protege_4.2_beta/bundles/org.protege.jaxb.jar"/>
+	<classpathentry kind="lib" path="/home/mazman/workspace/lib/Jena-2.5.7/lib/log4j-1.2.12.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+   <extension
+         id="fr.spim.archonte.DifferentialClassHierarchyViewComponent"
+         point="org.protege.editor.core.application.ViewComponent">
+      <label
+            value="Differential class hierarchy">
+      </label>
+      <class
+            value="fr.spim.archonte.DifferentialClassHierarchyViewComponent">
+      </class>
+      <headerColor value="@org.protege.classcolor"/>
+  	  <category value="@org.protege.classcategory"/>
+   </extension>
+   <extension
+         id="fr.spim.archonte.LexicalisationClassView"
+         point="org.protege.editor.core.application.ViewComponent">
+      <label
+            value="Archonte Lexicalisation Class View">
+      </label>
+      <class
+            value="fr.spim.archonte.LexicalisationClassView">
+      </class>
+      <headerColor value="@org.protege.classcolor"/>
+  	  <category value="@org.protege.classcategory"/>
+   </extension>
+   <extension
+         id="fr.spim.archonte.LexicalisationObjectPropertyView"
+         point="org.protege.editor.core.application.ViewComponent">
+      <label
+            value="Archonte Lexicalisation Object Property View">
+      </label>
+      <class
+            value="fr.spim.archonte.LexicalisationObjectPropertyView">
+      </class>
+      <headerColor value="@org.protege.objectpropertycolor"/>
+  	  <category value="@org.protege.objectpropertycategory"/>
+   </extension>
+   <extension
+         id="fr.spim.archonte.DifferentialClassView"
+         point="org.protege.editor.core.application.ViewComponent">
+      <label
+            value="Archonte Differential Class View">
+      </label>
+      <class
+            value="fr.spim.archonte.DifferentialClassView">
+      </class>
+      <headerColor value="@org.protege.classcolor"/>
+  	  <category value="@org.protege.classcategory"/>
+   </extension>
+   <extension
+         id="fr.spim.archonte.DifferentialObjectPropertyView"
+         point="org.protege.editor.core.application.ViewComponent">
+      <label
+            value="Archonte Differential Object Property View">
+      </label>
+      <class
+            value="fr.spim.archonte.DifferentialObjectPropertyView">
+      </class>
+      <headerColor value="@org.protege.objectpropertycolor"/>
+  	  <category value="@org.protege.objectpropertycategory"/>
+   </extension>
+</plugin>

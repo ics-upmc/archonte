@@ -1,0 +1,850 @@
+#LyX 1.6.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{a4wide}
+\end_preamble
+\use_default_options false
+\language french
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Archonte Plugin pour Protégé 4.0"
+\pdf_author "Laurent Mazuel"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Archonte Plugin pour Protégé 4.0
+\end_layout
+
+\begin_layout Author
+Laurent Mazuel
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Présentation
+\end_layout
+
+\begin_layout Standard
+Ce plugin a pour vocation à fusionner l'éditeur d'ontologie DOE
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://homepages.cwi.nl/~troncy/DOE/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ avec Protégé 4.0.
+ Le besoin de ce plugin part d'un constat simple:
+\end_layout
+
+\begin_layout Itemize
+Doe permet d'éditer les informations lexicales multi-lingue de manière simple.
+ De plus, il propose la gestion différentielle des concepts (méthode Archonte).
+ Tout ceci n'existe pas sous Protégé
+\end_layout
+
+\begin_layout Itemize
+Protégé propose la gestion des concepts définis et formalisme complexe (ce
+ que DOE ne propose pas).
+ 
+\end_layout
+
+\begin_layout Standard
+D'autre part, il est aisé de passer de DOE à Protégé, mais de Protégé à
+ DOE les définitions de concepts complexes sont perdues.
+ Or, il est parfaitement envisageable d'avoir envie de rajouter des informations
+ terminologiques alors que l'ontologie est fortement avancée du point de
+ vue conceptuel.
+\end_layout
+
+\begin_layout Standard
+L'utilité de ce plug-in est ainsi définie de manière à proposer dans Protégé
+ les fonctionnalités qui n'étaient auparavant accessibles que dans DOE:
+\end_layout
+
+\begin_layout Itemize
+Deux nouveaux onglets 
+\begin_inset Quotes fld
+\end_inset
+
+Archonte Lexicalisation Class View
+\begin_inset Quotes frd
+\end_inset
+
+ et 
+\begin_inset Quotes fld
+\end_inset
+
+Archonte Lexicalisation Object Property View
+\begin_inset Quotes frd
+\end_inset
+
+ qui propose le panneau de lexicalisation de DOE (à quelques modifications
+ mineures) dans Protégé
+\end_layout
+
+\begin_layout Itemize
+Deux nouveaux onglets 
+\begin_inset Quotes fld
+\end_inset
+
+Archonte Differential Class View
+\begin_inset Quotes frd
+\end_inset
+
+ et 
+\begin_inset Quotes fld
+\end_inset
+
+Archonte Differential Object Property View
+\begin_inset Quotes frd
+\end_inset
+
+ qui propose le panneau de sémantique différentielle de DOE.
+\end_layout
+
+\begin_layout Section
+Installation
+\end_layout
+
+\begin_layout Subsection
+Fichiers
+\end_layout
+
+\begin_layout Standard
+Mettez simplement le fichier 
+\begin_inset Quotes fld
+\end_inset
+
+fr.spim.archonte.jar
+\begin_inset Quotes frd
+\end_inset
+
+ dans le dossier 
+\begin_inset Quotes fld
+\end_inset
+
+plugins
+\begin_inset Quotes frd
+\end_inset
+
+ situé dans le dossier de Protégé 4.0.
+\end_layout
+
+\begin_layout Subsection
+Affichage des onglets
+\end_layout
+
+\begin_layout Subsubsection
+Les deux onglets 
+\begin_inset Quotes fld
+\end_inset
+
+classe
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sélectionner l'onglet principal 
+\begin_inset Quotes fld
+\end_inset
+
+Classes
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dans le menu 
+\begin_inset Quotes fld
+\end_inset
+
+View
+\begin_inset Quotes frd
+\end_inset
+
+ et 
+\begin_inset Quotes fld
+\end_inset
+
+Classes views
+\begin_inset Quotes frd
+\end_inset
+
+ apparaissent les deux onglets pour les classes:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Archonte Lexicalisation Class View
+\end_layout
+
+\begin_layout Itemize
+Archonte Differential Class View
+\end_layout
+
+\begin_layout Standard
+Protégé vous permet de les placer.
+ Typiquement, ils sont à placer dans la partie en haut à droite, mais ce
+ n'est qu'une suggestion de présentation (figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Panneau-Archonte-Lexicalisation"
+
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/ClassesExample.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Panneau-Archonte-Lexicalisation"
+
+\end_inset
+
+Panneau 
+\begin_inset Quotes fld
+\end_inset
+
+Archonte Lexicalisation Class View
+\begin_inset Quotes frd
+\end_inset
+
+ de l'onglet 
+\begin_inset Quotes fld
+\end_inset
+
+Classes
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Les deux onglets 
+\begin_inset Quotes fld
+\end_inset
+
+object properties
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sélectionner l'onglet principal 
+\begin_inset Quotes fld
+\end_inset
+
+Object properties
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dans le menu 
+\begin_inset Quotes fld
+\end_inset
+
+View
+\begin_inset Quotes frd
+\end_inset
+
+ et 
+\begin_inset Quotes fld
+\end_inset
+
+Object Property views
+\begin_inset Quotes frd
+\end_inset
+
+ apparaissent les deux onglets pour les classes:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Archonte Lexicalisation Object Property View
+\end_layout
+
+\begin_layout Itemize
+Archonte Differential Object Property View
+\end_layout
+
+\begin_layout Standard
+Protégé vous permet de les placer.
+ Typiquement, ils sont à placer dans la partie en haut à droite, mais ce
+ n'est qu'une suggestion de présentation.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Utilisation
+\end_layout
+
+\begin_layout Standard
+Nous ne décrirons ici que le fonctionnement pour les onglets 
+\begin_inset Quotes fld
+\end_inset
+
+Classe
+\begin_inset Quotes frd
+\end_inset
+
+, les onglets 
+\begin_inset Quotes fld
+\end_inset
+
+Object Property
+\begin_inset Quotes frd
+\end_inset
+
+ étant totalement identiques.
+\end_layout
+
+\begin_layout Subsection
+L'onglet 
+\begin_inset Quotes fld
+\end_inset
+
+Archonte Lexicalisation Class View
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'onglet 
+\begin_inset Quotes fld
+\end_inset
+
+Archonte Lexicalisation Class View
+\begin_inset Quotes frd
+\end_inset
+
+ est celui de la figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:L'onglet-Archonte-Lexicalisation"
+
+\end_inset
+
+.
+ Description des composants:
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/LexClass.png
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:L'onglet-Archonte-Lexicalisation"
+
+\end_inset
+
+L'onglet 
+\begin_inset Quotes fld
+\end_inset
+
+Archonte Lexicalisation Class View
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Preferred Term: le terme préféré pour ce concept, en langue naturel
+\end_layout
+
+\begin_layout Enumerate
+Encyclopedic definition: définition complète du concept
+\end_layout
+
+\begin_layout Enumerate
+Language: la langue courante de l'ensemble des textes de l'onglet.
+ Changer la langue dans le menu change l'ensemble des labels dans une autre
+ langue (si ils ont déjà été défini bien sur, pas de traduction automatique
+ ;-)).
+\end_layout
+
+\begin_layout Enumerate
+Label: permet de rentrer un label informatique, typiquement de la forme
+ 
+\begin_inset Quotes fld
+\end_inset
+
+CeciEstUnLabel
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Voir remarque importante à la fin de cette liste.
+\end_layout
+
+\begin_layout Enumerate
+New synonym: permet d'ajouter un synonyme.
+ La touche 
+\begin_inset Quotes fld
+\end_inset
+
+entrée
+\begin_inset Quotes frd
+\end_inset
+
+ ou le bouton 
+\begin_inset Quotes fld
+\end_inset
+
+Add synonym
+\begin_inset Quotes frd
+\end_inset
+
+ produise le même effet: l'ajout à la liste.
+\end_layout
+
+\begin_layout Enumerate
+Synonym List: liste les synonymes.
+ Le bouton 
+\begin_inset Quotes fld
+\end_inset
+
+remove synonym
+\begin_inset Quotes frd
+\end_inset
+
+ permet de supprimer le synonyme sélectionné couramment.
+\end_layout
+
+\begin_layout Standard
+Au sujet du label, son utilité reste à discuter.
+ Sa présence néanmoins est nécessaire pour assurer une bonne compatibilité
+ avec DOE.
+ En pratique, la recommendation actuelle pour la conception d'ontologies
+ est de ne pas changer l'URI d'un concept.
+ Donc si l'URI a été construite avec un label 
+\emph on
+signifiant
+\emph default
+ (tel que 
+\begin_inset Quotes fld
+\end_inset
+
+InsuffisanceCardiaque
+\begin_inset Quotes frd
+\end_inset
+
+), l'URI ne doit pas évoluer avec le temps, même pour une utilisation internatio
+nale.
+ Ceci peut rendre la lecture de l'ontologie difficile au premier abord,
+ mais les annotations 
+\begin_inset Quotes fld
+\end_inset
+
+preferred term
+\begin_inset Quotes frd
+\end_inset
+
+ sont là pour combler le problème de lecture dans une langue différente.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Protégé permet d'ailleurs de définir son propre 
+\begin_inset Quotes fld
+\end_inset
+
+renderer
+\begin_inset Quotes frd
+\end_inset
+
+, ou moteur d'affichage.
+ Ce moteur permet de choisir quelle annotation utiliser pour l'affichage
+ des noms des concepts dans l'arborescence.
+ Pour l'utilisation des 
+\begin_inset Quotes fld
+\end_inset
+
+preferred term
+\begin_inset Quotes frd
+\end_inset
+
+, il faut rentrer l'annotation 
+\begin_inset Quotes fld
+\end_inset
+
+prefLabel
+\begin_inset Quotes frd
+\end_inset
+
+ du namespace DOE.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Néanmoins, ce champ peut permettre de rentrer le label considéré comme signifian
+t dans une autre langue (pour l'exemple précédent 
+\begin_inset Quotes fld
+\end_inset
+
+HeartFailure
+\begin_inset Quotes frd
+\end_inset
+
+), si l'information semble necessaire a être précisée.
+\end_layout
+
+\begin_layout Subsection
+L'onglet 
+\begin_inset Quotes fld
+\end_inset
+
+Archonte Differential Class View
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'onglet 
+\begin_inset Quotes fld
+\end_inset
+
+Archonte Lexicalisation Class View
+\begin_inset Quotes frd
+\end_inset
+
+ est celui de la figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:L'onglet-Archonte-Differential"
+
+\end_inset
+
+.
+ Il est nécessaire de connaître la méthode Archonte pour bien comprendre
+ ces champs.
+ Description des composants:
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/DiffClass.png
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:L'onglet-Archonte-Differential"
+
+\end_inset
+
+L'onglet 
+\begin_inset Quotes fld
+\end_inset
+
+Archonte Differential Class View
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes fld
+\end_inset
+
+edit SWP
+\begin_inset Quotes frd
+\end_inset
+
+ permet d'éditer les différences entre ce noeud et son père.
+ 
+\emph on
+Attention, cette méthode lance une synchronisation de ce champ sur tous
+ les frères de ce noeud, selon la méthode Archonte.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes fld
+\end_inset
+
+edit SWS
+\begin_inset Quotes frd
+\end_inset
+
+ permet d'éditer les différences entre ce noeud et ses frères.
+ 
+\emph on
+Attention, cette méthode lance une synchronisation de ce champ sur tous
+ les frères de ce noeud, selon la méthode Archonte.
+\end_layout
+
+\begin_layout Enumerate
+Le champ 
+\begin_inset Quotes fld
+\end_inset
+
+Difference with siblings
+\begin_inset Quotes frd
+\end_inset
+
+: permet d'écrire la différence supposée avec ses voisins
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes fld
+\end_inset
+
+Build DWP
+\begin_inset Quotes frd
+\end_inset
+
+: construit une représentation de la différence entre le noeud courant et
+ son père en utilisant les 3 champs précédents.
+\end_layout
+
+\begin_layout Section
+Améliorations prévues
+\end_layout
+
+\begin_layout Enumerate
+Permettre (comme dans DOE) de changer l'ensemble des labels de l'arbre dans
+ les labels d'une autre langue.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+État d'avancement: le code de modification pour un noeud unique est fait
+ (bouton 
+\begin_inset Quotes fld
+\end_inset
+
+apply label to node
+\begin_inset Quotes frd
+\end_inset
+
+), il reste à faire:
+\end_layout
+
+\begin_layout Itemize
+un parcours dynamique de tout l'arbre (facile) 
+\end_layout
+
+\begin_layout Itemize
+décider quoi faire si la langue choisie ne défini pas tous les labels (heu...)
+\end_layout
+
+\begin_layout Itemize
+mettre le bouton pour lancer tout ça quelque part....
+ (menu 
+\begin_inset Quotes fld
+\end_inset
+
+Refactor
+\begin_inset Quotes frd
+\end_inset
+
+ accessible? onglet Archonte?)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Je suis preneur de toute idée :-)
+\end_layout
+
+\end_body
+\end_document
