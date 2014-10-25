@@ -21,9 +21,9 @@ Bundle-Version: 1.4.2.2012_10_15_0_278
 Bundle-Activator: org.protege.editor.core.plugin.DefaultPluginActivato
  r
 Require-Bundle:  org.eclipse.equinox.registry, org.eclipse.equinox.com
- mon, org.protege.editor.core.application;bundle-version="4.2", org.pr
- otege.editor.owl;bundle-version="4.2", org.semanticweb.owl.owlapi;bun
- dle-version="3.0"
+ mon, org.protege.editor.core.application;bundle-version="4.3", org.pr
+ otege.editor.owl;bundle-version="4.3", org.semanticweb.owl.owlapi;bun
+ dle-version="3.4"
 Built-By: mazman
 Build-Date: 10/15/2012 10:43 PM
 
