@@ -1,4 +1,4 @@
 archonte
 ========
 
-Archinte plugin for Protégé
+Archonte plugin for Protégé 4.2
