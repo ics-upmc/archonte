@@ -39,7 +39,12 @@ public class DifferentialClassView extends AbstractOWLClassViewComponent {
 	 */
 	@Override
 	public void disposeView() {
-		view.disposeView();
+		try {
+			view.disposeView();
+		}
+		catch(Exception e) {
+			// No big deal
+		}
 	}
 
 }

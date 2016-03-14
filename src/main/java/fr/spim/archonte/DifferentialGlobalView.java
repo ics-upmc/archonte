@@ -9,6 +9,7 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URI;
+import java.util.Collection;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -31,6 +32,7 @@ import org.semanticweb.owlapi.model.OWLEntity;
 import org.semanticweb.owlapi.model.OWLLiteral;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.RemoveAxiom;
+import org.semanticweb.owlapi.search.Searcher;
 import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
 
 /**
@@ -323,14 +325,18 @@ public class DifferentialGlobalView<T extends OWLEntity> {
 	}
 
 	void disposeView() {
-		// Save information of last concept selected
-		if(currentClass != null) {
-			saveFieldsToModel(currentOWLModelManager, currentClass, currentOntology);
+		try {
+			// Save information of last concept selected
+			if(currentClass != null) {
+				saveFieldsToModel(currentOWLModelManager, currentClass, currentOntology);
+			}
+			currentClass = null;
+			currentOntology = null;
+			currentOWLModelManager = null;
+			currentAnnotations.clear();
+		} catch (Exception e) {
+			// Nevermind...
 		}
-		currentClass = null;
-		currentOntology = null;
-		currentOWLModelManager = null;
-		currentAnnotations.clear();
 	}
 
 	/** Save the current information in the class.
@@ -384,7 +390,8 @@ public class DifferentialGlobalView<T extends OWLEntity> {
 			OWLOntology activeOntology) {
 
 		Set<OWLAnnotation> finalAnnotation = new TreeSet<OWLAnnotation>();
-		Set<OWLAnnotation> annotations = selectedClass.getAnnotations(activeOntology);
+		Collection<OWLAnnotation> annotations = 
+				Searcher.annotationObjects(activeOntology.getAnnotationAssertionAxioms(selectedClass.getIRI()));
 		for(OWLAnnotation annotation : annotations) {
 			OWLAnnotationValue value = annotation.getValue();
 			if(value instanceof OWLLiteral) {
@@ -448,8 +455,9 @@ public class DifferentialGlobalView<T extends OWLEntity> {
 
 	void changeDifferentialAnnotation(String principleType, OWLEntity myEntity, String diffText) {
 		// All annotations
-		Set<OWLAnnotation> annotations = myEntity.getAnnotations(
-				currentOntology,
+		Collection<OWLAnnotation> annotations = 
+			Searcher.annotationObjects(
+				currentOntology.getAnnotationAssertionAxioms(myEntity.getIRI()),
 				factory.getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_COMMENT.getIRI()));
 		// The annotation if a find it
 		OWLAnnotation searchAnnotation = null;
@@ -498,6 +506,7 @@ public class DifferentialGlobalView<T extends OWLEntity> {
 
 		DifferentialActionListener() {}
 
+		@Override
 		public void actionPerformed(ActionEvent e) {
 			if (e.getSource()==editSWPButton)
 				editButton_actionPerformed("SWP");

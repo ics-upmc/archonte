@@ -3,8 +3,8 @@
  */
 package fr.spim.archonte;
 
+import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 import java.util.Vector;
 
 import org.semanticweb.owlapi.model.AddAxiom;
@@ -14,19 +14,19 @@ import org.semanticweb.owlapi.model.OWLAnnotationProperty;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLDataFactory;
-import org.semanticweb.owlapi.model.OWLEntity;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLOntologyChange;
+import org.semanticweb.owlapi.model.RemoveAxiom;
+import org.semanticweb.owlapi.search.Searcher;
 import org.semanticweb.owlapi.util.OWLOntologyWalker;
 import org.semanticweb.owlapi.util.OWLOntologyWalkerVisitor;
 import org.semanticweb.owlapi.vocab.SKOSVocabulary;
-import org.semanticweb.owlapi.model.RemoveAxiom;
 
 
 /** Doe to Skos annotations visitor.
  * @author Laurent Mazuel
  */
-public class DoeToSkosVisitor extends OWLOntologyWalkerVisitor<Object> {
+public class DoeToSkosVisitor extends OWLOntologyWalkerVisitor {
 
 	private OWLDataFactory factory = null; 
 
@@ -55,17 +55,18 @@ public class DoeToSkosVisitor extends OWLOntologyWalkerVisitor<Object> {
 	}
 	
 	@Override
-	public Object visit(OWLObjectProperty desc) {
-		return visit((OWLEntity)desc);
+	public void visit(OWLObjectProperty desc) {
+		myvisit(desc.getIRI());
 	}
 	
 	@Override
-	public Object visit(OWLClass desc) {
-		return visit((OWLEntity)desc) ;
+	public void visit(OWLClass desc) {
+		myvisit(desc.getIRI()) ;
 	}
 
-	public Object visit(OWLEntity desc) {
-		Set<OWLAnnotation> annotations = desc.getAnnotations(getCurrentOntology());
+	public void myvisit(IRI desc_iri) {
+		Collection<OWLAnnotation> annotations =
+				Searcher.annotationObjects(getCurrentOntology().getAnnotationAssertionAxioms(desc_iri));
 		// For each annotation...
 		for(OWLAnnotation annot : annotations) {
 			// Del it if it is DOE
@@ -75,7 +76,7 @@ public class DoeToSkosVisitor extends OWLOntologyWalkerVisitor<Object> {
 			if(LexicalisationGlobalPanel.doeAnnotations.contains(propIri)) {
 				// Remove it
 				OWLAxiom axiom = factory.getOWLAnnotationAssertionAxiom(
-						desc.getIRI(),
+						desc_iri,
 						annot);
 				changes.add(new RemoveAxiom(getCurrentOntology(), axiom));
 				// What fragment?
@@ -106,11 +107,10 @@ public class DoeToSkosVisitor extends OWLOntologyWalkerVisitor<Object> {
 					continue;
 				}
 				OWLAxiom newAxiom = factory.getOWLAnnotationAssertionAxiom(
-						desc.getIRI(),
+						desc_iri,
 						newAnnot);
 				changes.add(new AddAxiom(getCurrentOntology(), newAxiom));
 			}
 		}
-		return null;
 	}
 }

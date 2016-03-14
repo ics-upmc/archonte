@@ -1,31 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/plugins/ca.uvic.cs.chisel.cajun.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/plugins/org.coode.dlquery.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/plugins/org.coode.owlviz.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/plugins/org.protege.editor.owl.codegeneration.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/plugins/org.protege.editor.owl.diff.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/plugins/org.protege.editor.owl.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/plugins/org.protege.editor.owl.rdf.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/plugins/org.protege.explanation.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/plugins/org.protege.ontograf.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/plugins/org.protege.owl.diff.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/plugins/org.protege.owl.rdf.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/plugins/org.semanticweb.HermiT.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/plugins/org.semanticweb.owl.owlapi.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/plugins/uk.ac.manchester.cs.owl.factplusplus.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/bundles/org.apache.felix.bundlerepository-1.4.2.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/bundles/org.apache.felix.configadmin.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/bundles/org.apache.felix.scr.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/bundles/org.eclipse.equinox.common.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/bundles/org.eclipse.equinox.registry.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/bundles/org.eclipse.equinox.supplement.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/bundles/org.protege.common.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/bundles/org.protege.editor.core.application.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/Protege_4.3/bundles/org.protege.jaxb.jar"/>
-	<classpathentry kind="lib" path="build/lib/log4j.jar"/>
-	<classpathentry kind="lib" path="/home/mazman/workspace/ArchontePlugin4.2/protege-owlapi-extensions-3.2.4.jar"/>
-	<classpathentry kind="output" path="build/classes"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>

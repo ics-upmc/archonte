@@ -1,18 +1,17 @@
 package fr.spim.archonte;
 
+import org.protege.editor.owl.model.OWLModelManager;
+import org.protege.editor.owl.model.hierarchy.OWLObjectHierarchyProvider;
 import org.protege.editor.owl.ui.view.objectproperty.AbstractOWLObjectPropertyViewComponent;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
 
-/**
- * @author Laurent Mazuel
- */
-public class LexicalisationObjectPropertyView extends
+public class DifferentialObjectPropertyView extends
 		AbstractOWLObjectPropertyViewComponent {
 
 	/** To make Java happy */
-	private static final long serialVersionUID = 3984586644861009005L;
+	private static final long serialVersionUID = -328975047134249766L;
 	
-	private LexicalisationGlobalPanel view = null;
+	private DifferentialGlobalView<OWLObjectProperty> view = null;
 
 	/* (non-Javadoc)
 	 * @see org.protege.editor.owl.ui.view.AbstractOWLPropertyViewComponent#updateView(org.semanticweb.owl.model.OWLProperty)
@@ -28,7 +27,9 @@ public class LexicalisationObjectPropertyView extends
 	 */
 	@Override
 	public void initialiseView() throws Exception {
-		view = new LexicalisationGlobalPanel(this);
+		OWLModelManager manager = getOWLModelManager();
+		OWLObjectHierarchyProvider<OWLObjectProperty> hierarchyProvider = manager.getOWLHierarchyManager().getOWLObjectPropertyHierarchyProvider();
+		view = new DifferentialGlobalView<OWLObjectProperty>(manager, hierarchyProvider, this);
 	}
 
 	/* (non-Javadoc)
@@ -36,6 +37,10 @@ public class LexicalisationObjectPropertyView extends
 	 */
 	@Override
 	public void disposeView() {
-		view.disposeView();
+		try {
+			view.disposeView();
+		} catch (Exception e) {
+			// No big deal
+		}
 	}
 }

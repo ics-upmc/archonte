@@ -1,6 +1,7 @@
 package fr.spim.archonte;
 
 import java.awt.Color;
+import java.util.Optional;
 
 import org.protege.editor.owl.model.hierarchy.OWLObjectHierarchyProvider;
 import org.protege.editor.owl.ui.view.cls.AbstractOWLClassHierarchyViewComponent;
@@ -23,4 +24,9 @@ public class DifferentialClassHierarchyViewComponent extends AbstractOWLClassHie
         provider.setOntologies(getOWLModelManager().getActiveOntologies());
         return provider;
     }
+
+	@Override
+	protected Optional<OWLObjectHierarchyProvider<OWLClass>> getInferredHierarchyProvider() {
+		return Optional.empty();
+	}
 }

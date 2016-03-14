@@ -2,7 +2,6 @@ package fr.spim.archonte;
 
 import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -24,7 +23,6 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -42,6 +40,7 @@ import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLEntity;
 import org.semanticweb.owlapi.model.OWLLiteral;
 import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.search.Searcher;
 import org.semanticweb.owlapi.util.OWLOntologyWalker;
 import org.semanticweb.owlapi.vocab.SKOSVocabulary;
 
@@ -500,7 +499,8 @@ public class LexicalisationGlobalPanel {
 			String langToLoad) throws NeedConvertionException {
 
 		Set<OWLAnnotation> finalAnnotation = new TreeSet<OWLAnnotation>();
-		Set<OWLAnnotation> annotations = selectedClass.getAnnotations(activeOntology);
+		Collection<OWLAnnotation> annotations = 
+				Searcher.annotationObjects(activeOntology.getAnnotationAssertionAxioms(selectedClass.getIRI()));
 		for(OWLAnnotation annotation : annotations) {
 			OWLAnnotationValue constant = annotation.getValue();
 			if(constant instanceof OWLLiteral) {
